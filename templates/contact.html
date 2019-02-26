@@ -7,4 +7,22 @@ Contact
 {% block body %}
 <h1>You can contact us</h1>
 <p>Feel free to contact us</p>
+
+<span><font color="orange">Rendering examples:</font></span>
+<p>Address: {{ adress }} <br> Postcode: {{postcode}} <br> Phone: {{phonenumber}}</p>
+
+<span><font color="green">For Loop example</font></span>
+<ul>
+    {% for item in contact_list %}
+    <li>{{ forloop.counter}}-{{ item }} </li>
+    {% endfor %}
+</ul>
+<span><font color="red">Condition example</font></span>
+<ul>
+    {% if isopen %}
+        {% for items in contact_list %}
+    <li>{{ items}}</li>
+        {% endfor %}
+    {% endif %}
+</ul>
 {% endblock %}
