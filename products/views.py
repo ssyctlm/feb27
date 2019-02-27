@@ -9,3 +9,9 @@ def product_detail_view(request,*args,**kwargs):
         'description':obj.description
     }
     return render(request,'product/detail.html',context)
+
+def product_detail_view1(request):
+    context = {
+        'object':Product.objects.get(id=1)
+    }
+    return render(request,'product/detail1.html',context)
