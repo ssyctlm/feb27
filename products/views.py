@@ -13,12 +13,7 @@ def product_detail_view(request,*args,**kwargs):
 
 def product_detail_view1(request):
     context = {
-        'object':Product.objects.get(id=1)
+        'object':Product.objects.get(id=3)
     }
-    return render(request,'product/detail1.html',context)
+    return render(request,'product_inapp/detail1.html',context)
 
-def product_detail_inapp(request):
-    context = {
-        'object':Product.objects.get(id=1)
-    }
-    return render(request,'products/product_detail.html',context)
