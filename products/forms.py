@@ -11,3 +11,8 @@ class ProductForm(forms.ModelForm):
             'price'
         ]
 
+class PureDjangoForm(forms.Form):
+    title = forms.CharField()
+    description = forms.CharField()
+    price = forms.DecimalField()
+

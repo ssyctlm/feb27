@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
 {% block body %}
+
+<!-- DjangoModelForm way: -->
 <!--<form method='POST'> {% csrf_token %}-->
     <!--{{ form.as_p }}-->
 
@@ -9,18 +11,29 @@
     <!---->
 <!--</form>-->
 
+
+<!-- RalHtmlForm way: -->
+<!--<form action='./create'  method="POST"> {% csrf_token %}-->
+    <!--<input type="text" name ='title' placeholder="Your title"/>-->
+    <!--<input type ='submit' value="Save"/>-->
+
+<!--</form>-->
+
+<!--<form action='https://www.google.com/search' method="GET">-->
+    <!--<h3>Some tricky magic to do search on google</h3>-->
+    <!--<input type="text" name ='q' placeholder="Your Search On gg"/>-->
+<!--<input type ='submit' value="Search"/>-->
+
+<!--</form>-->
+
+<!-- PureDjangoForm way: -->
 <form action='./create'  method="POST"> {% csrf_token %}
-    <input type="text" name ='title' placeholder="Your title"/>
+    {{ form.as_p }}
+    <!-- It could be 'as_ul', to render the form as an unordered list -->
     <input type ='submit' value="Save"/>
 
 </form>
 
-<form action='https://www.google.com/search' method="GET">
-    <h3>Some tricky magic to do search on google</h3>
-    <input type="text" name ='q' placeholder="Your Search On gg"/>
-<input type ='submit' value="Search"/>
-
-</form>
 
 {% endblock %}
 
