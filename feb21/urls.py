@@ -27,6 +27,7 @@ urlpatterns = [
     path('about',about_view),
     path('product',product_detail_view),
     path('product1',product_detail_view1),
-    path('create',product_create_view)
+    path('create',product_create_view),
+    path('done',create_down_view)
 
 ]
