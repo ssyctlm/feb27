@@ -71,3 +71,14 @@ def product_detail_view1(request):
 
 def create_down_view(request):
     return render(request,'product_inapp/create_done.html',{})
+
+
+
+## Prodcut objects_list page rendering
+
+def plist(request):
+    queryset = Product.objects.all()
+    context = {
+        'object_list':queryset
+    }
+    return render(request,'product_inapp/plist.html',context)
