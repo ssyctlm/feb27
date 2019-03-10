@@ -2,8 +2,12 @@
 
 {% block body %}
 <H1>Showcase Product List </H1>
+<p>Detail page</p>
 
 {% for list in object_list %}
-<p> {{list.id}} -- {{list.title}} -- ${{list.price}}</p>
+<p> {{list.id}}
+    --<a href="{{list.get_absolute_url}}"> method 1: {{list.title}} </a>
+    --<a href="/pdetail/{{list.id}}/">Method 2: {{list.title}} </a>
+    -- ${{list.price}}</p>
 {% endfor %}
 {% endblock %}

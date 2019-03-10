@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.http import Http404
+from django.shortcuts import render,get_object_or_404
 from .models import Product
 from .forms import ProductForm, PureDjangoForm
 # Create your views here.
@@ -82,3 +83,15 @@ def plist(request):
         'object_list':queryset
     }
     return render(request,'product_inapp/plist.html',context)
+
+def dynamic_lookup_view(request,p_id):
+    #obj = Product.objects.get(id=p_id)
+    #obj = get_object_or_404(Product,id=p_id)
+    try:
+        obj = Product.objects.get(id=p_id)
+    except Product.DoesNotExist:
+        raise Http404
+    context={
+        'object':obj
+    }
+    return render(request,'product_inapp/pdetail.html',context)

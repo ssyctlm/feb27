@@ -29,6 +29,7 @@ urlpatterns = [
     path('product1',product_detail_view1),
     path('create',product_create_view),
     path('done',create_down_view),
-    path('plist',plist)
+    path('plist',plist),
+    path('pdetail/<int:p_id>/',dynamic_lookup_view)
 
 ]

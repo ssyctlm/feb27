@@ -15,3 +15,6 @@ class Product(models.Model):
     summary = models.TextField(default='blank',blank=False,null=False)
     featured = models.BooleanField(default=True)
 
+    def get_absolute_url(self):
+        return f"/pdetail/{self.id}/"
+
