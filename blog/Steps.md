@@ -1,4 +1,8 @@
 -[x] - Create a New App named Blog
--[ ] - Add 'Blog' to your Django project
--[ ] - Create a Model named Article
--[ ] - Run Migrations
+-[x] - Add 'Blog' to your Django project
+-[x] - Create a Model named Article
+-[x] - Run Migrations
+-[ ] - Create a ModelForm for Article
+-[ ] - Create 'article_list.html' & 'article_detail.html' Template
+-[ ] - Add Article Model to the Admin
+-[ ] - Save a new Article object in the admin

@@ -18,6 +18,7 @@ from django.urls import path
 
 from pages.views import *
 from products.views import *
+from blog.views import *
 # from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,6 +31,8 @@ urlpatterns = [
     path('create',product_create_view),
     path('done',create_down_view),
     path('plist',plist),
-    path('pdetail/<int:p_id>/',dynamic_lookup_view)
+    path('pdetail/<int:p_id>/',dynamic_lookup_view),
+
+
 
 ]
