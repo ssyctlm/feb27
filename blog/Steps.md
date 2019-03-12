@@ -1,0 +1,4 @@
+-[x] - Create a New App named Blog
+-[ ] - Add 'Blog' to your Django project
+-[ ] - Create a Model named Article
+-[ ] - Run Migrations
