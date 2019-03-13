@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h5>Hello world, This is my blog list</h5>
 
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block body %}
+<h5>Hello world, This is my blog list</h5>
+{% for item in object_list %}
+<li>{{item.id}} -- <a href="{{item.id}}">{{item.title}}</a> </li>
+{% endfor %}
+
+{% endblock %}
+
