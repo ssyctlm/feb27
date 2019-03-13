@@ -7,7 +7,7 @@
 {% for list in object_list %}
 <p> {{list.id}}
     --<a href="{{list.get_absolute_url}}"> method 1: {{list.title}} </a>
-    --<a href="/pdetail/{{list.id}}/">Method 2: {{list.title}} </a>
+    --<a href="/products/{{list.id}}/">Method 2: {{list.title}} </a>
     -- ${{list.price}}</p>
 {% endfor %}
 {% endblock %}

@@ -70,8 +70,7 @@ def product_detail_view1(request):
     return render(request,'product_inapp/detail1.html',context)
 
 
-def create_down_view(request):
-    return render(request,'product_inapp/create_done.html',{})
+
 
 
 

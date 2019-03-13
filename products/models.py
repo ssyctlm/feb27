@@ -16,5 +16,5 @@ class Product(models.Model):
     featured = models.BooleanField(default=True)
 
     def get_absolute_url(self):
-        return f"/pdetail/{self.id}/"
+        return f"/products/{self.id}/"
 
