@@ -13,7 +13,7 @@ def about_view(request,*args, **kwargs):
     print(args,kwargs)
     print(request)
     #return HttpResponse("<h1>This is about us</h1>")
-    return render(request,'about.html')
+    return render(request,'about1.html')
 
 def contact_view(request,*args, **kwargs):
     my_context = {
@@ -25,7 +25,7 @@ def contact_view(request,*args, **kwargs):
 
     }
     #return HttpResponse("<h1>This is contact page</h1>")
-    return render(request,'contact.html',my_context)
+    return render(request,'contact_.html',my_context)
 
 def solution_view(request,*args, **kwargs):
     #return HttpResponse("<h1>This is solution page</h1>")

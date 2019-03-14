@@ -19,11 +19,13 @@ from django.urls import path,include
 from pages.views import *
 from products.views import *
 from blog.views import *
+from bootstrap.views import *
 # from . import views
 urlpatterns = [
+    # Reference
     path('blog/',include('blog.urls')),
     path('products/', include('products.urls')),
-
+    path('bootstrap/',include('bootstrap.urls')),
 
     # # App products
     # path('products/', plist),
