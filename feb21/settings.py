@@ -38,8 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # third party
 
+    # third party
+    # 'phonenumber_field'
     # own
     'products',
     'pages',

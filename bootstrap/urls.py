@@ -6,9 +6,9 @@ from .views import (
     contact_view
 )
 
-app_name = 'articles'
+# app_name = 'articles'
 urlpatterns = [
-    path('home',index_view,name='home'),
+    path('',index_view,name='home'),
     path('about',about_view,name = 'about'),
     path('services',services_view,name = 'services'),
     path('contact',contact_view,name = 'contact'),
